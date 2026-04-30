@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upgrade: Trace, Find & Learn Mega Pack</title>
     <!-- Modern Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #FF5A5F;
@@ -17,7 +20,7 @@
             --white: #FFFFFF;
             --success: #10B981;
         }
-        
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -32,7 +35,11 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             font-family: 'Outfit', sans-serif;
             line-height: 1.2;
             color: var(--dark);
@@ -51,7 +58,7 @@
             padding: 15px 20px;
             font-size: 0.95rem;
             border-bottom: 3px solid var(--primary);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .premium-alert .container {
@@ -68,7 +75,7 @@
         .progress-bar {
             width: 150px;
             height: 8px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             overflow: hidden;
             margin-left: 10px;
@@ -83,13 +90,29 @@
         }
 
         @keyframes loadProgress {
-            from { width: 0%; }
-            to { width: 66%; } /* Represents Step 2 of 3 */
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 66%;
+            }
+
+            /* Represents Step 2 of 3 */
         }
 
         @media(max-width: 768px) {
-            .premium-alert .container { flex-direction: column; gap: 10px; text-align: center; }
-            .progress-container { width: 100%; justify-content: center; margin-top: 5px; }
+            .premium-alert .container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .progress-container {
+                width: 100%;
+                justify-content: center;
+                margin-top: 5px;
+            }
         }
 
         /* Hero Section */
@@ -119,7 +142,7 @@
             font-size: 3.5rem;
             font-weight: 900;
             margin-bottom: 25px;
-            text-shadow: 2px 2px 0px rgba(255,255,255,0.8);
+            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
         }
 
         .hero h1 span {
@@ -153,18 +176,40 @@
         }
 
         @keyframes bounceRight {
-            0%, 100% { transform: translateX(0) scale(1); }
-            50% { transform: translateX(15px) scale(1.05); }
+
+            0%,
+            100% {
+                transform: translateX(0) scale(1);
+            }
+
+            50% {
+                transform: translateX(15px) scale(1.05);
+            }
         }
 
         @media(max-width: 768px) {
-            .bundle-visuals { flex-direction: column; align-items: center; }
-            .curved-arrow { transform: rotate(90deg); margin: 30px 0; animation: bounceDown 2s infinite ease-in-out; }
+            .bundle-visuals {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .curved-arrow {
+                transform: rotate(90deg);
+                margin: 30px 0;
+                animation: bounceDown 2s infinite ease-in-out;
+            }
         }
 
         @keyframes bounceDown {
-            0%, 100% { transform: rotate(90deg) translateY(0); }
-            50% { transform: rotate(90deg) translateY(-15px); }
+
+            0%,
+            100% {
+                transform: rotate(90deg) translateY(0);
+            }
+
+            50% {
+                transform: rotate(90deg) translateY(-15px);
+            }
         }
 
         .bundle-item {
@@ -172,7 +217,7 @@
             background: white;
             padding: 20px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
             text-align: center;
             border: 2px solid #E2E8F0;
             position: relative;
@@ -186,7 +231,7 @@
 
         .bundle-item.highlight {
             border-color: var(--primary);
-            box-shadow: 0 25px 50px rgba(255,90,95,0.15);
+            box-shadow: 0 25px 50px rgba(255, 90, 95, 0.15);
         }
 
         .bundle-label {
@@ -222,10 +267,13 @@
         .plus-icon {
             font-size: 3rem;
             background: var(--light);
-            width: 80px; height: 80px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
             margin-bottom: 10px;
             animation: bounce 2s infinite;
         }
@@ -242,7 +290,9 @@
             padding: 80px 0;
         }
 
-        .section-light { background-color: var(--white); }
+        .section-light {
+            background-color: var(--white);
+        }
 
         .section-title {
             text-align: center;
@@ -269,7 +319,9 @@
         }
 
         @media(max-width: 900px) {
-            .info-grid { grid-template-columns: 1fr; }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .info-text h3 {
@@ -292,7 +344,11 @@
             margin: 30px 0;
         }
 
-        .highlight-box p { margin: 0; color: #166534; font-weight: 500; }
+        .highlight-box p {
+            margin: 0;
+            color: #166534;
+            font-weight: 500;
+        }
 
         /* The "WHY" List */
         .why-list {
@@ -309,7 +365,8 @@
         .why-list li::before {
             content: '🟡';
             position: absolute;
-            left: 0; top: -5px;
+            left: 0;
+            top: -5px;
             font-size: 2rem;
         }
 
@@ -336,7 +393,7 @@
             background: white;
             padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             border: 1px solid #E2E8F0;
             transition: all 0.3s ease;
             display: flex;
@@ -376,7 +433,9 @@
         .steps-container::before {
             content: '';
             position: absolute;
-            top: 0; bottom: 0; left: 40px;
+            top: 0;
+            bottom: 0;
+            left: 40px;
             width: 4px;
             background: #E2E8F0;
             border-radius: 2px;
@@ -390,16 +449,20 @@
 
         .step-number {
             position: absolute;
-            left: 15px; top: 0;
-            width: 54px; height: 54px;
+            left: 15px;
+            top: 0;
+            width: 54px;
+            height: 54px;
             background: var(--primary);
             color: white;
             border-radius: 50%;
-            display: flex; justify-content: center; align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: 1.5rem;
             font-weight: 800;
             font-family: 'Outfit', sans-serif;
-            box-shadow: 0 0 0 10px var(--white), 0 10px 20px rgba(255,90,95,0.3);
+            box-shadow: 0 0 0 10px var(--white), 0 10px 20px rgba(255, 90, 95, 0.3);
             z-index: 2;
         }
 
@@ -407,7 +470,7 @@
             background: white;
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
             border: 1px solid #E2E8F0;
         }
 
@@ -432,7 +495,8 @@
         .step-content ul li::before {
             content: '✨';
             position: absolute;
-            left: 0; top: 0;
+            left: 0;
+            top: 0;
         }
 
         .pro-strategy {
@@ -444,7 +508,11 @@
             text-align: center;
         }
 
-        .pro-strategy h3 { color: #B45309; font-size: 1.8rem; margin-bottom: 15px; }
+        .pro-strategy h3 {
+            color: #B45309;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
 
         /* Grid for Themes */
         .themes-grid {
@@ -459,9 +527,9 @@
             border-radius: 20px;
             padding: 30px 25px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -470,7 +538,10 @@
         .theme-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 6px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
             background: var(--secondary);
             transition: height 0.3s ease;
             z-index: -1;
@@ -478,7 +549,7 @@
 
         .theme-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
         }
 
         .theme-card:hover::before {
@@ -486,9 +557,23 @@
             opacity: 0.05;
         }
 
-        .theme-icon { font-size: 3.5rem; margin-bottom: 20px; display: inline-block; }
-        .theme-card h3 { font-size: 1.4rem; margin-bottom: 12px; font-weight: 800; }
-        .theme-card p { font-size: 1rem; color: #64748B; font-weight: 500; }
+        .theme-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .theme-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .theme-card p {
+            font-size: 1rem;
+            color: #64748B;
+            font-weight: 500;
+        }
 
         /* Sample Outputs */
         .samples-grid {
@@ -497,131 +582,253 @@
             gap: 40px;
         }
 
-        @media(max-width: 768px) { .samples-grid { grid-template-columns: 1fr; } }
+        @media(max-width: 768px) {
+            .samples-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
         .sample-item {
-            background: white; padding: 15px; border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08); border: 1px solid #E2E8F0;
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border: 1px solid #E2E8F0;
         }
 
         .sample-item img {
-            width: 100%; height: auto; border-radius: 12px; display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
             transition: transform 0.4s ease;
         }
-        
-        .sample-item:hover img { transform: scale(1.03); }
+
+        .sample-item:hover img {
+            transform: scale(1.03);
+        }
 
         /* Bonuses */
         .bonuses-container {
             background: linear-gradient(145deg, #1E1E2A 0%, #2D2D44 100%);
-            color: white; border-radius: 30px; padding: 60px; margin: 60px 0;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2); position: relative; overflow: hidden;
+            color: white;
+            border-radius: 30px;
+            padding: 60px;
+            margin: 60px 0;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
         }
 
         .bonuses-container::after {
-            content: '🎁'; position: absolute; font-size: 20rem; right: -50px;
-            bottom: -80px; opacity: 0.05; pointer-events: none;
+            content: '🎁';
+            position: absolute;
+            font-size: 20rem;
+            right: -50px;
+            bottom: -80px;
+            opacity: 0.05;
+            pointer-events: none;
         }
 
-        .bonuses-header { text-align: center; margin-bottom: 50px; }
-        .bonuses-header h2 { color: white; font-size: 2.8rem; }
-        .bonuses-header p { color: #94A3B8; font-size: 1.2rem; }
+        .bonuses-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .bonuses-header h2 {
+            color: white;
+            font-size: 2.8rem;
+        }
+
+        .bonuses-header p {
+            color: #94A3B8;
+            font-size: 1.2rem;
+        }
 
         .bonus-item {
-            display: flex; align-items: center; margin-bottom: 30px;
-            background: rgba(255,255,255,0.08); padding: 30px; border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
         }
 
         @media(max-width: 600px) {
-            .bonus-item { flex-direction: column; text-align: center; }
-            .bonus-icon { margin: 0 0 20px 0 !important; }
+            .bonus-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .bonus-icon {
+                margin: 0 0 20px 0 !important;
+            }
         }
 
-        .bonus-item:hover { transform: translateX(10px); background: rgba(255,255,255,0.12); }
+        .bonus-item:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.12);
+        }
 
         .bonus-icon {
-            font-size: 3.5rem; margin-right: 30px; line-height: 1;
+            font-size: 3.5rem;
+            margin-right: 30px;
+            line-height: 1;
             background: linear-gradient(135deg, var(--accent), #F59E0B);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .bonus-content h4 { color: var(--accent); font-size: 1.6rem; margin-bottom: 8px; }
-        .bonus-content p { color: #E2E8F0; font-size: 1.05rem; }
+        .bonus-content h4 {
+            color: var(--accent);
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .bonus-content p {
+            color: #E2E8F0;
+            font-size: 1.05rem;
+        }
 
         /* Pricing & CTA */
         .pricing-section {
-            text-align: center; padding: 80px 20px; background: var(--light); position: relative;
+            text-align: center;
+            padding: 80px 20px;
+            background: var(--light);
+            position: relative;
         }
 
         .price-box {
-            background: #fff; max-width: 650px; margin: 0 auto; padding: 50px 40px;
-            border-radius: 30px; box-shadow: 0 30px 60px rgba(255, 90, 95, 0.15);
-            border: 3px solid var(--primary); position: relative;
+            background: #fff;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 50px 40px;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(255, 90, 95, 0.15);
+            border: 3px solid var(--primary);
+            position: relative;
         }
 
         .value-stack {
-            margin-bottom: 30px; text-align: left; background: #F8FAFC;
-            padding: 25px; border-radius: 15px; border: 1px dashed #CBD5E1;
+            margin-bottom: 30px;
+            text-align: left;
+            background: #F8FAFC;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px dashed #CBD5E1;
         }
 
         .value-item {
-            display: flex; justify-content: space-between; margin-bottom: 12px;
-            font-weight: 500; color: #334155; font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-weight: 500;
+            color: #334155;
+            font-size: 1.1rem;
         }
 
         .value-item.total {
-            margin-top: 20px; padding-top: 20px; border-top: 2px solid #E2E8F0;
-            font-weight: 800; font-size: 1.3rem; color: var(--dark);
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #E2E8F0;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--dark);
         }
 
         .price-value {
-            font-size: 5rem; font-weight: 900; color: var(--primary);
-            margin: 10px 0 30px; font-family: 'Outfit', sans-serif; line-height: 1;
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin: 10px 0 30px;
+            font-family: 'Outfit', sans-serif;
+            line-height: 1;
         }
 
         .cta-button {
-            display: inline-block; background: linear-gradient(to bottom, #FF5A5F, #E0484C);
-            color: white; font-size: 1.6rem; font-weight: 800; padding: 22px 50px;
-            border-radius: 50px; text-decoration: none; text-transform: uppercase;
-            letter-spacing: 1px; box-shadow: 0 15px 30px rgba(255, 90, 95, 0.35);
-            transition: all 0.3s ease; font-family: 'Outfit', sans-serif; width: 100%;
+            display: inline-block;
+            background: linear-gradient(to bottom, #FF5A5F, #E0484C);
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 800;
+            padding: 22px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 15px 30px rgba(255, 90, 95, 0.35);
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+            width: 100%;
         }
 
         .cta-button:hover {
             background: linear-gradient(to bottom, #FF6B70, #EB5055);
-            transform: translateY(-3px); box-shadow: 0 20px 40px rgba(255, 90, 95, 0.45);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 90, 95, 0.45);
         }
 
         .no-thanks {
-            display: inline-block; text-align: center; margin-top: 40px; color: #94A3B8;
-            text-decoration: none; font-size: 1rem; transition: color 0.2s ease;
+            display: inline-block;
+            text-align: center;
+            margin-top: 40px;
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease;
             border-bottom: 1px dashed #94A3B8;
         }
 
-        .no-thanks:hover { color: #64748B; border-bottom-color: #64748B; }
+        .no-thanks:hover {
+            color: #64748B;
+            border-bottom-color: #64748B;
+        }
 
         @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+            }
+
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 15px rgba(239, 68, 68, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
         }
 
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
     </style>
 </head>
+
 <body>
+    <!-- WarriorPlus Tracking Pixel -->
+    <img src="https://warriorplus.com/o2/btn/pn100011001/tmlmdf/wn18zp/463544" height="1" width="1" style="visibility: hidden;">
 
     <!-- Premium Progress Bar Header -->
     <div class="premium-alert">
         <div class="container">
-            <div>✨ <strong>Special One-Time Offer</strong> — Unlock your customer-only upgrade before completing checkout.</div>
+            <div>✨ <strong>Special One-Time Offer</strong> — Unlock your customer-only upgrade before completing
+                checkout.</div>
             <div class="progress-container">
-                <span style="font-size: 0.85rem; font-weight: 700; color: #fff; letter-spacing: 1px;">CHECKOUT PROGRESS</span>
+                <span style="font-size: 0.85rem; font-weight: 700; color: #fff; letter-spacing: 1px;">CHECKOUT
+                    PROGRESS</span>
                 <div class="progress-bar">
                     <div class="progress-fill"></div>
                 </div>
@@ -637,32 +844,39 @@
                 <span>Trace, Find & Learn Mega Pack!</span>
             </h1>
             <p class="subheadline">
-                Unlock <strong>400 Additional Themed Prompts</strong> designed to build unstoppable letter recognition, vocabulary skills, and early reading confidence for kids ages 3–6.
+                Unlock <strong>400 Additional Themed Prompts</strong> designed to build unstoppable letter recognition,
+                vocabulary skills, and early reading confidence for kids ages 3–6.
             </p>
 
             <!-- Visual Representation (B&W to Color) -->
-            <div class="bundle-visuals" style="display: flex; align-items: center; justify-content: center; gap: 30px; margin: 50px auto; max-width: 1000px;">
+            <div class="bundle-visuals"
+                style="display: flex; align-items: center; justify-content: center; gap: 30px; margin: 50px auto; max-width: 1000px;">
                 <!-- Left: B&W -->
                 <div class="bundle-item" style="flex: 1; padding: 15px; border: 2px dashed #CBD5E1; box-shadow: none;">
-                    <img src="oto 1 main.png" alt="Black and White Tracing Worksheet" style="border: none; border-radius: 8px;">
+                    <img src="oto 1 main.png" alt="Black and White Tracing Worksheet"
+                        style="border: none; border-radius: 8px;">
                 </div>
-                
+
                 <!-- Center: Curved Red Arrow -->
                 <div style="flex: 0 0 auto; display: flex; justify-content: center; align-items: center;">
-                    <svg width="120" height="100" viewBox="0 0 120 100" fill="none" stroke="#DC2626" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" class="curved-arrow">
+                    <svg width="120" height="100" viewBox="0 0 120 100" fill="none" stroke="#DC2626" stroke-width="8"
+                        stroke-linecap="round" stroke-linejoin="round" class="curved-arrow">
                         <path d="M10 90 Q 30 20, 110 50" />
                         <polyline points="75 25 110 50 85 80" />
                     </svg>
                 </div>
-                
+
                 <!-- Right: Colored -->
                 <div class="bundle-item highlight" style="flex: 1; padding: 15px;">
                     <img src="oto 1.png" alt="Colored Interactive Worksheet" style="border: none; border-radius: 8px;">
                 </div>
             </div>
-            
+
             <p style="max-width: 850px; margin: 0 auto; font-size: 1.15rem; color: #475569; text-align: center;">
-                Includes 400 fun, kid-safe trace, say, find, and <strong>color</strong> worksheet prompts focused entirely on one clear learning activity: recognizing letters, speaking vocabulary words, and bringing real-life scenes to life with color! The colored version shows exactly how much fun kids will have as they engage with the worksheets.
+                Includes 400 fun, kid-safe trace, say, find, and <strong>color</strong> worksheet prompts focused
+                entirely on one clear learning activity: recognizing letters, speaking vocabulary words, and bringing
+                real-life scenes to life with color! The colored version shows exactly how much fun kids will have as
+                they engage with the worksheets.
             </p>
         </div>
     </section>
@@ -673,10 +887,15 @@
             <div class="info-grid">
                 <div class="info-text">
                     <h3>Trace, Find & Color Activities Are Booming on Etsy & Amazon KDP</h3>
-                    <p>Trace, vocabulary, and picture-based coloring activity books for kids are rapidly growing in popularity across multiple bestselling categories on Etsy and Amazon — especially in niches like Early Learning, Preschool Workbooks, and Printable Educational Activities.</p>
-                    <p>Demand continues to rise as parents actively search for fun, screen-free learning tools that help children master letters and build early reading skills by interacting with familiar, real-life things.</p>
+                    <p>Trace, vocabulary, and picture-based coloring activity books for kids are rapidly growing in
+                        popularity across multiple bestselling categories on Etsy and Amazon — especially in niches like
+                        Early Learning, Preschool Workbooks, and Printable Educational Activities.</p>
+                    <p>Demand continues to rise as parents actively search for fun, screen-free learning tools that help
+                        children master letters and build early reading skills by interacting with familiar, real-life
+                        things.</p>
                     <div class="highlight-box">
-                        <p>💡 Now imagine seeing your own name on the cover of a best-selling kids' tracing and coloring activity book.</p>
+                        <p>💡 Now imagine seeing your own name on the cover of a best-selling kids' tracing and coloring
+                            activity book.</p>
                     </div>
                 </div>
                 <div class="info-image">
@@ -684,15 +903,18 @@
                     <ul class="why-list">
                         <li>
                             <h4>Learn Letters With Focus & Creativity</h4>
-                            <p>Children learn to follow shapes carefully and connect letters with familiar real-life objects — then bring them to life with colors, maximizing engagement!</p>
+                            <p>Children learn to follow shapes carefully and connect letters with familiar real-life
+                                objects — then bring them to life with colors, maximizing engagement!</p>
                         </li>
                         <li>
                             <h4>Build Strong Vocabulary Visually</h4>
-                            <p>No boring memorization. Kids naturally learn new vocabulary connected to real-world themes like Animals, Transport, and Daily Life while they color.</p>
+                            <p>No boring memorization. Kids naturally learn new vocabulary connected to real-world
+                                themes like Animals, Transport, and Daily Life while they color.</p>
                         </li>
                         <li>
                             <h4>Support Calm Focus</h4>
-                            <p>The structured tracing and coloring style creates a distraction-free learning experience, ideal for quiet time, creativity, or classroom centers.</p>
+                            <p>The structured tracing and coloring style creates a distraction-free learning experience,
+                                ideal for quiet time, creativity, or classroom centers.</p>
                         </li>
                     </ul>
                 </div>
@@ -705,7 +927,8 @@
         <div class="container">
             <h2 class="section-title">8 Amazing Themed Worlds To Explore</h2>
             <p class="section-subtitle">
-                This collection is carefully structured into 8 major themes, providing strong variety while keeping learning organized, consistent, and engaging. Kids connect letters with the worlds they love!
+                This collection is carefully structured into 8 major themes, providing strong variety while keeping
+                learning organized, consistent, and engaging. Kids connect letters with the worlds they love!
             </p>
 
             <div class="themes-grid">
@@ -757,7 +980,8 @@
     <section class="section section-light">
         <div class="container">
             <h2 class="section-title">⭐ Who Is This Perfect For?</h2>
-            <p class="section-subtitle">This collection isn't only helpful for children — it's incredibly useful for adults who create learning materials too!</p>
+            <p class="section-subtitle">This collection isn't only helpful for children — it's incredibly useful for
+                adults who create learning materials too!</p>
 
             <div class="target-grid">
                 <div class="target-card">
@@ -785,7 +1009,8 @@
                     <div class="target-icon">💻</div>
                     <div>
                         <h4>Digital Sellers & KDP</h4>
-                        <p>Perfect for Etsy, Amazon KDP, and PLR stores looking to sell evergreen printable activities.</p>
+                        <p>Perfect for Etsy, Amazon KDP, and PLR stores looking to sell evergreen printable activities.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -796,14 +1021,16 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title">How To Turn These Prompts Into Ready-to-Sell Products</h2>
-            <p class="section-subtitle">You don't need to be a professional worksheet designer. With the Mega Pack, creating engaging learning activities is fast, simple, and stress-free.</p>
+            <p class="section-subtitle">You don't need to be a professional worksheet designer. With the Mega Pack,
+                creating engaging learning activities is fast, simple, and stress-free.</p>
 
             <div class="steps-container">
                 <div class="step-item">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h3>Build Your Worksheets</h3>
-                        <p>Choose any themed prompt from the 8 Worlds and paste it into ChatGPT. Within seconds, you'll receive a clear blueprint including:</p>
+                        <p>Choose any themed prompt from the 8 Worlds and paste it into ChatGPT. Within seconds, you'll
+                            receive a clear blueprint including:</p>
                         <ul>
                             <li>A short, child-friendly title and instructions.</li>
                             <li>A ready-to-use traceable letter and vocabulary set.</li>
@@ -816,7 +1043,8 @@
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <h3>Generate Activity Pages</h3>
-                        <p>Run the prompts one by one to instantly generate printable Trace, Say, Find & Color worksheets. Each one is designed to include:</p>
+                        <p>Run the prompts one by one to instantly generate printable Trace, Say, Find & Color
+                            worksheets. Each one is designed to include:</p>
                         <ul>
                             <li>Friendly, kid-safe scenes filled with real-life objects to color.</li>
                             <li>Traceable elements that build writing confidence.</li>
@@ -829,7 +1057,8 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Format, Finalize & Publish</h3>
-                        <p>Make small edits, organize your pages, and format your project using Canva, MS Word, or Google Docs. Then publish as:</p>
+                        <p>Make small edits, organize your pages, and format your project using Canva, MS Word, or
+                            Google Docs. Then publish as:</p>
                         <ul>
                             <li>A kids' tracing workbook on Etsy & Amazon KDP.</li>
                             <li>A printable worksheet bundle for Etsy.</li>
@@ -841,7 +1070,9 @@
 
             <div class="pro-strategy">
                 <h3>🌟 Pro Strategy: Build a Complete Series</h3>
-                <p>Start with the Mega Pack, then expand by organizing activities into themed volumes (e.g., "The Animal Workbook", "The Vehicles Activity Book"). A well-structured series helps you increase earnings and attract repeat buyers!</p>
+                <p>Start with the Mega Pack, then expand by organizing activities into themed volumes (e.g., "The Animal
+                    Workbook", "The Vehicles Activity Book"). A well-structured series helps you increase earnings and
+                    attract repeat buyers!</p>
             </div>
         </div>
     </section>
@@ -850,7 +1081,8 @@
     <section class="section section-light">
         <div class="container">
             <h2 class="section-title">Perfect Output Every Time</h2>
-            <p class="section-subtitle">Check out these amazing examples generated directly from the Mega Pack. Clean, engaging, and ready for kids!</p>
+            <p class="section-subtitle">Check out these amazing examples generated directly from the Mega Pack. Clean,
+                engaging, and ready for kids!</p>
 
             <div class="samples-grid">
                 <div class="sample-item">
@@ -882,7 +1114,8 @@
                     <div class="bonus-icon">🎨</div>
                     <div class="bonus-content">
                         <h4>Bonus #1: Premium Cover Design Prompts Pack</h4>
-                        <p>Easily create stunning, professional covers for your activity books. These prompts take the guesswork out of designing eye-catching artwork that kids and parents will love.</p>
+                        <p>Easily create stunning, professional covers for your activity books. These prompts take the
+                            guesswork out of designing eye-catching artwork that kids and parents will love.</p>
                     </div>
                 </div>
 
@@ -890,7 +1123,9 @@
                     <div class="bonus-icon">💼</div>
                     <div class="bonus-content">
                         <h4>Bonus #2: Commercial Use License</h4>
-                        <p>Turn your creations into a business! This license gives you full rights to sell the worksheets, activity books, and educational printables you generate using our prompts. Keep 100% of the profits!</p>
+                        <p>Turn your creations into a business! This license gives you full rights to sell the
+                            worksheets, activity books, and educational printables you generate using our prompts. Keep
+                            100% of the profits!</p>
                     </div>
                 </div>
 
@@ -898,7 +1133,8 @@
                     <div class="bonus-icon">⭐</div>
                     <div class="bonus-content">
                         <h4>Bonus #3: 50 Extra Whole-Picture Trace Prompts Pack</h4>
-                        <p>Go beyond simple letter tracing! Get 50 additional prompts focused on large, whole-picture tracing activities that help young learners develop fine motor skills and patience.</p>
+                        <p>Go beyond simple letter tracing! Get 50 additional prompts focused on large, whole-picture
+                            tracing activities that help young learners develop fine motor skills and patience.</p>
                     </div>
                 </div>
             </div>
@@ -910,7 +1146,7 @@
         <div class="container">
             <div class="price-box">
                 <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--dark);">Upgrade Your Order Now</h2>
-                
+
                 <div class="value-stack">
                     <div class="value-item">
                         <span>400 Mega Pack Prompts (8 Themes)</span>
@@ -937,25 +1173,49 @@
                 <p style="font-size: 1.2rem; color: #475569; margin-bottom: 10px;">Get Everything Today For Just:</p>
                 <div class="price-value">$16.99</div>
 
-                <!-- ADD YOUR CHECKOUT LINK HERE -->
-                <a href="#" class="cta-button">YES! UPGRADE MY ORDER NOW</a>
-                
-                <p style="margin-top: 20px; color: #64748B; font-size: 0.95rem; font-weight: 500;">🔒 Secure One-Time Payment</p>
+                <!-- CHECKOUT LINK -->
+                <a href="https://warriorplus.com/o2/buy/tmlmdf/wn18zp/z0cbtr" class="cta-button">YES! UPGRADE MY ORDER NOW</a>
+
+                <p style="margin-top: 20px; color: #64748B; font-size: 0.95rem; font-weight: 500;">🔒 Secure One-Time
+                    Payment</p>
             </div>
 
             <!-- Guarantee -->
-            <div style="max-width: 700px; margin: 40px auto; background: white; padding: 25px; border-radius: 15px; border: 1px solid #E2E8F0; text-align: left; display: flex; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+            <div
+                style="max-width: 700px; margin: 40px auto; background: white; padding: 25px; border-radius: 15px; border: 1px solid #E2E8F0; text-align: left; display: flex; align-items: center; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
                 <div style="font-size: 3rem; margin-right: 20px;">🛡️</div>
                 <div>
-                    <h4 style="margin-bottom: 5px; color: var(--dark); font-size: 1.2rem;">30-Day Satisfaction Guarantee</h4>
-                    <p style="color: #64748B; font-size: 0.95rem; margin: 0;">Your investment is protected. If you're not satisfied with the quality of the prompts and the worksheets they generate, let us know within 30 days for a full refund. No questions asked!</p>
+                    <h4 style="margin-bottom: 5px; color: var(--dark); font-size: 1.2rem;">30-Day Satisfaction Guarantee
+                    </h4>
+                    <p style="color: #64748B; font-size: 0.95rem; margin: 0;">Your investment is protected. If you're
+                        not satisfied with the quality of the prompts and the worksheets they generate, let us know
+                        within 30 days for a full refund. No questions asked!</p>
                 </div>
             </div>
 
             <!-- NO THANKS LINK -->
-            <a href="#" class="no-thanks">No thanks, I'll pass on this huge discount and the commercial license. I understand I will not see this offer again.</a>
+            <a href="#" class="no-thanks">No thanks, I'll pass on this huge discount and the commercial license. I
+                understand I will not see this offer again.</a>
         </div>
+
+        <!-- FOOTER LINKS -->
+        <footer class="site-footer">
+            <p>
+                <a href="https://www.nextwiseai.com/privacy" target="_blank">Privacy Policy</a> |
+                <a href="https://www.nextwiseai.com/disclaimer" target="_blank">Disclaimer</a> |
+                <a href="https://www.nextwiseai.com/support" target="_blank">Support</a>
+            </p>
+            <p style="margin-top: 10px; font-weight: normal;">&copy; 2026 NextWise AI. All Rights Reserved.</p>
+        </footer>
+
+        <!-- WarriorPlus Disclaimer -->
+        <div style="margin-top: 30px;">
+            <script type="text/javascript" src="https://warriorplus.com/o2/disclaimer/tmlmdf" defer></script>
+            <div class="wplus_spdisclaimer"></div>
+        </div>
+
     </section>
 
 </body>
+
 </html>
